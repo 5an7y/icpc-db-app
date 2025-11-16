@@ -1,0 +1,9 @@
+[
+  {
+    "id": "CF_1080A",
+    "url": "https://codeforces.com/problemset/problem/1080/A",
+    "concurso": "Codeforces Round 1080",
+    "temas": ["Segment Tree", "Binary Search"],
+    "ruta_solucion": "./soluciones/CF_1080A.md"
+  }
+]

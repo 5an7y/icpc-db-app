@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modo|capitalize }} problema · ICPC DB{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h1 class="h4 mb-3">
+    {% if modo == "nuevo" %}Nuevo problema{% else %}Editar problema{% endif %}
+  </h1>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">ID del problema</label>
+      <input type="text" name="id" class="form-control"
+             value="{{ problema.id if problema else '' }}" required
+             placeholder="Ej. CF_1080A, UVA_1234, etc.">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">URL del enunciado</label>
+      <input type="url" name="url" class="form-control"
+             value="{{ problema.url if problema else '' }}"
+             placeholder="https://...">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Concurso</label>
+      <select name="concurso" class="form-select">
+        <option value="">— Sin concurso —</option>
+        {% for c in concursos %}
+          <option value="{{ c.nombre }}"
+            {% if problema and problema.concurso == c.nombre %}selected{% endif %}>
+            {{ c.nombre }}{% if c.anio %} ({{ c.anio }}){% endif %}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Temas</label>
+      <div class="border rounded p-2" style="max-height: 250px; overflow-y: auto;">
+        {% for t in temas %}
+          {% set checked = problema and problema.temas and (t.nombre in problema.temas) %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"
+                   name="temas" id="tema_{{ loop.index }}" value="{{ t.nombre }}"
+                   {% if checked %}checked{% endif %}>
+            <label class="form-check-label" for="tema_{{ loop.index }}">
+              {{ t.nombre }} <span class="text-muted">({{ t.categoria }})</span>
+            </label>
+          </div>
+        {% endfor %}
+        {% if not temas %}
+          <div class="text-muted">No hay temas creados todavía.</div>
+        {% endif %}
+      </div>
+      <div class="form-text">
+        (Puedes seleccionar varios temas).
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Ruta de solución / explicación (opcional)</label>
+      <input type="text" name="ruta_solucion" class="form-control"
+             value="{{ problema.ruta_solucion if problema else '' }}"
+             placeholder="./soluciones/CF_1080A.md">
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Guardar
+    </button>
+    <a href="{{ url_for('lista_problemas') }}" class="btn btn-secondary ms-2">
+      Cancelar
+    </a>
+  </form>
+</div>
+{% endblock %}

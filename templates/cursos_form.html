@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modo|capitalize }} curso · ICPC DB{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h1 class="h4 mb-3">
+    {% if modo == "nuevo" %}Nuevo curso{% else %}Editar curso{% endif %}
+  </h1>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">Nombre del curso</label>
+      <input type="text" name="nombre" class="form-control"
+             value="{{ curso.nombre if curso else '' }}" required
+             placeholder="Ej. ICPC 2025 Equipo A">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Descripción (opcional)</label>
+      <textarea name="descripcion" class="form-control" rows="3"
+                placeholder="Ej. Entrenamiento primavera 2025, grupo avanzado.">{{ curso.descripcion if curso else '' }}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Guardar
+    </button>
+    <a href="{{ url_for('lista_cursos') }}" class="btn btn-secondary ms-2">
+      Cancelar
+    </a>
+  </form>
+</div>
+{% endblock %}

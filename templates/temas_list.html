@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Temas · ICPC DB{% endblock %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">Temas</h1>
+    <!-- Más adelante aquí irá el botón “Nuevo Tema” -->
+        <a href="{{ url_for('nuevo_tema') }}" class="btn btn-sm btn-success">
+            + Nuevo tema
+        </a>
+  </div>
+
+  {% if temas %}
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th style="width: 4rem;">Orden</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Ruta explicación</th>
+            <th style="width: 14rem;">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tema in temas %}
+            <tr>
+              <td>{{ tema.orden }}</td>
+              <td>{{ tema.nombre }}</td>
+              <td>{{ tema.categoria }}</td>
+              <td>
+                {% if tema.ruta %}
+                    <a href="{{ url_for('ver_tema', nombre=tema.nombre) }}"
+                    class="btn btn-sm btn-outline-info">
+                    Ver explicación
+                    </a>
+                {% else %}
+                    <span class="text-muted">Sin ruta</span>
+                {% endif %}
+            </td>
+              <td class="text-nowrap">
+                <!-- Botones de mover -->
+                <form action="{{ url_for('mover_tema', nombre=tema.nombre, direccion='up') }}"
+                        method="POST" style="display:inline-block;">
+                    <button class="btn btn-sm btn-outline-secondary"
+                            {% if loop.first %}disabled{% endif %}
+                            title="Mover arriba">
+                    ↑
+                    </button>
+                </form>
+
+                <form action="{{ url_for('mover_tema', nombre=tema.nombre, direccion='down') }}"
+                        method="POST" style="display:inline-block;">
+                    <button class="btn btn-sm btn-outline-secondary"
+                            {% if loop.last %}disabled{% endif %}
+                            title="Mover abajo">
+                    ↓
+                    </button>
+                </form>
+
+                <!-- Editar -->
+                <a href="{{ url_for('editar_tema', nombre=tema.nombre) }}" 
+                    class="btn btn-sm btn-primary ms-1">
+                    Editar
+                </a>
+
+                <!-- Eliminar -->
+                <form action="{{ url_for('eliminar_tema', nombre=tema.nombre) }}"
+                        method="POST" style="display:inline-block;"
+                        onsubmit="return confirm('¿Seguro que deseas eliminar este tema?');">
+                    <button class="btn btn-sm btn-danger ms-1">Eliminar</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="text-muted">Aún no tienes temas registrados.</p>
+  {% endif %}
+{% endblock %}
+

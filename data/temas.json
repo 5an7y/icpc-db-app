@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Segment Tree",
+        "categoria": "Estructuras de datos",
+        "orden": 2,
+        "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
+    },
+    {
+        "nombre": "Binary Search",
+        "categoria": "Tecnicas",
+        "orden": 1,
+        "ruta": ""
+    }
+]

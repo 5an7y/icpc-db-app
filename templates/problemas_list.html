@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Problemas · ICPC DB{% endblock %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">Problemas</h1>
+    <a href="{{ url_for('nuevo_problema') }}" class="btn btn-sm btn-success">
+      + Nuevo problema
+    </a>
+  </div>
+
+  {% if problemas %}
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th style="width: 8rem;">ID</th>
+            <th>Enunciado</th>
+            <th>Concurso</th>
+            <th>Temas</th>
+            <th style="width: 10rem;">Solución</th>
+            <th style="width: 12rem;">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in problemas %}
+            <tr>
+              <td><code>{{ p.id }}</code></td>
+              <td>
+                {% if p.url %}
+                  <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+                    Abrir problema
+                  </a>
+                {% else %}
+                  <span class="text-muted">Sin URL</span>
+                {% endif %}
+              </td>
+              <td>{{ p.concurso or "—" }}</td>
+              <td>
+                {% if p.temas %}
+                  {% for t in p.temas %}
+                    <span class="badge text-bg-secondary me-1">{{ t }}</span>
+                  {% endfor %}
+                {% else %}
+                  <span class="text-muted">Sin temas</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if p.ruta_solucion %}
+                  <a href="{{ url_for('ver_solucion_problema', problema_id=p.id) }}"
+                     class="btn btn-sm btn-outline-info">
+                    Ver solución
+                  </a>
+                {% else %}
+                  <span class="text-muted">Sin solución</span>
+                {% endif %}
+              </td>
+              <td class="text-nowrap">
+                <a href="{{ url_for('editar_problema', problema_id=p.id) }}"
+                   class="btn btn-sm btn-primary">
+                  Editar
+                </a>
+
+                <form action="{{ url_for('eliminar_problema', problema_id=p.id) }}"
+                      method="POST" style="display:inline-block;"
+                      onsubmit="return confirm('¿Seguro que deseas eliminar este problema?');">
+                  <button class="btn btn-sm btn-danger ms-1">
+                    Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="text-muted">Aún no tienes problemas registrados.</p>
+  {% endif %}
+{% endblock %}

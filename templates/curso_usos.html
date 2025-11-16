@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Usos · {{ curso.nombre }} · ICPC DB{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <h1 class="h4 mb-1">Uso de material en: {{ curso.nombre }}</h1>
+  <p class="text-muted mb-0">{{ curso.descripcion or "Sin descripción" }}</p>
+</div>
+
+<form method="POST">
+  <!-- PROBLEMAS -->
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>Problemas usados</strong>
+      <span class="text-muted ms-2">
+        (marca los problemas que ya usaste en este curso)
+      </span>
+    </div>
+    <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+      {% if problemas %}
+        {% for p in problemas %}
+          {% set checked = p.id in (curso.usados_problemas or []) %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"
+                   name="usados_problemas" id="prob_{{ loop.index }}"
+                   value="{{ p.id }}" {% if checked %}checked{% endif %}>
+            <label class="form-check-label" for="prob_{{ loop.index }}">
+              <code>{{ p.id }}</code>
+              {% if p.concurso %} — {{ p.concurso }}{% endif %}
+              {% if p.temas %}
+                <span class="text-muted">
+                  ({{ p.temas|join(", ") }})
+                </span>
+              {% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-muted mb-0">No hay problemas registrados.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- CONCURSOS -->
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>Concursos usados</strong>
+      <span class="text-muted ms-2">
+        (marca concursos que ya asignaste completos en este curso)
+      </span>
+    </div>
+    <div class="card-body" style="max-height: 200px; overflow-y: auto;">
+      {% if concursos %}
+        {% for c in concursos %}
+          {% set checked = c.nombre in (curso.usados_concursos or []) %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"
+                   name="usados_concursos" id="conc_{{ loop.index }}"
+                   value="{{ c.nombre }}" {% if checked %}checked{% endif %}>
+            <label class="form-check-label" for="conc_{{ loop.index }}">
+              {{ c.nombre }}{% if c.anio %} ({{ c.anio }}){% endif %}
+              {% if c.categoria %}
+                <span class="text-muted"> — {{ c.categoria }}</span>
+              {% endif %}
+            </label>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-muted mb-0">No hay concursos registrados.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- TEMAS -->
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>Temas cubiertos</strong>
+      <span class="text-muted ms-2">
+        (marca los temas que ya has visto en este curso)
+      </span>
+    </div>
+    <div class="card-body" style="max-height: 250px; overflow-y: auto;">
+      {% if temas %}
+        {% for t in temas %}
+          {% set checked = t.nombre in (curso.usados_temas or []) %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"
+                   name="usados_temas" id="tema_{{ loop.index }}"
+                   value="{{ t.nombre }}" {% if checked %}checked{% endif %}>
+            <label class="form-check-label" for="tema_{{ loop.index }}">
+              {{ t.nombre }}
+              <span class="text-muted">({{ t.categoria }})</span>
+            </label>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-muted mb-0">No hay temas registrados.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    Guardar usos
+  </button>
+  <a href="{{ url_for('lista_cursos') }}" class="btn btn-secondary ms-2">
+    Volver a cursos
+  </a>
+</form>
+{% endblock %}

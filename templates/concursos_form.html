@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modo|capitalize }} concurso · ICPC DB{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h1 class="h4 mb-3">
+    {% if modo == "nuevo" %}Nuevo concurso{% else %}Editar concurso{% endif %}
+  </h1>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">Nombre del concurso</label>
+      <input type="text" name="nombre" class="form-control"
+             value="{{ concurso.nombre if concurso else '' }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Año</label>
+      <input type="number" name="anio" class="form-control"
+             value="{{ concurso.anio if concurso and concurso.anio is not none else '' }}"
+             placeholder="Ej. 2024 (opcional)">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Categoría</label>
+
+        <select name="categoria_existente" class="form-select mb-2">
+            <option value="">— Selecciona una categoría —</option>
+            {% for cat in categorias %}
+            <option value="{{ cat.nombre }}"
+                {% if concurso and concurso.categoria == cat.nombre %}selected{% endif %}>
+                {{ cat.nombre }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <div class="form-text mb-1">
+            O escribe una nueva categoría (tendrá prioridad sobre lo seleccionado arriba):
+        </div>
+        <input type="text" name="categoria_nueva" class="form-control"
+                placeholder="Nueva categoría (opcional)">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">
+      Guardar
+    </button>
+    <a href="{{ url_for('lista_concursos') }}" class="btn btn-secondary ms-2">
+      Cancelar
+    </a>
+  </form>
+</div>
+{% endblock %}

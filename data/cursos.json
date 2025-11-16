@@ -1,0 +1,15 @@
+[
+    {
+        "nombre": "ICPC 2025 Equipo A",
+        "descripcion": "Entrenamiento primer semestre 2025",
+        "usados_problemas": [
+            "CF_1080A"
+        ],
+        "usados_temas": [
+            "Segment Tree"
+        ],
+        "usados_concursos": [
+            "Codeforces Round 1080"
+        ]
+    }
+]

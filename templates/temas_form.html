@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ modo|capitalize }} tema · ICPC DB{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white rounded shadow-sm">
+  <h1 class="h4 mb-3">
+    {% if modo == "nuevo" %}Nuevo tema{% else %}Editar tema{% endif %}
+  </h1>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">Nombre del tema</label>
+      <input type="text" name="nombre" class="form-control"
+             value="{{ tema.nombre if tema else '' }}" required>
+    </div>
+
+    <div class="mb-3">
+    <label class="form-label">Categoría</label>
+
+    <select name="categoria_existente" class="form-select mb-2">
+        <option value="">— Selecciona una categoría —</option>
+        {% for cat in categorias %}
+        <option value="{{ cat }}"
+            {% if tema and tema.categoria == cat %}selected{% endif %}>
+            {{ cat }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <div class="form-text mb-1">
+        O escribe una nueva categoría (tendrá prioridad sobre lo seleccionado arriba):
+    </div>
+    <input type="text" name="categoria_nueva" class="form-control"
+            placeholder="Nueva categoría (opcional)">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Ruta del archivo de explicación</label>
+      <input type="text" name="ruta" class="form-control"
+             value="{{ tema.ruta if tema else '' }}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Guardar
+    </button>
+
+    <a href="{{ url_for('lista_temas') }}" class="btn btn-secondary ms-2">
+      Cancelar
+    </a>
+  </form>
+</div>
+{% endblock %}
