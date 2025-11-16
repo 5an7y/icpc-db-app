@@ -93,14 +93,93 @@ def cargar_problemas():
         return []
     with PROBLEMAS_FILE.open("r", encoding="utf-8") as f:
         probs = json.load(f)
-    # ordenar por concurso y luego por id
-    probs.sort(key=lambda p: (p.get("concurso") or "", p.get("id") or ""))
     return probs
 
 
 def guardar_problemas(problemas):
     with PROBLEMAS_FILE.open("w", encoding="utf-8") as f:
         json.dump(problemas, f, indent=4, ensure_ascii=False)
+
+def calcular_tema_principal(problema, temas):
+    """
+    Devuelve el nombre del 'tema principal' del problema:
+    el tema con mayor 'orden' de entre los temas asociados.
+    Si no tiene temas, devuelve 'Sin tema principal'.
+    """
+    nombres_temas_problema = problema.get("temas") or []
+    if not nombres_temas_problema:
+        return "Sin tema principal"
+
+    orden_por_nombre = {t["nombre"]: t.get("orden", 0) for t in temas}
+
+    # usamos -1 si el tema no existe en la lista de temas
+    return max(
+        nombres_temas_problema,
+        key=lambda nombre: orden_por_nombre.get(nombre, -1)
+    )
+
+
+def agrupar_problemas_por_tema_principal(problemas, temas):
+    """
+    Regresa una lista de grupos:
+    [
+      {
+        "nombre": "Segment Tree",
+        "problemas": [ ... lista de problemas ... ]
+      },
+      ...
+    ]
+    Los grupos se ordenan por el 'orden' del Tema.
+    Dentro de cada grupo:
+      - primero los etiquetados como Introductorios,
+      - luego el resto en el orden original.
+    """
+    # por si queremos usar el orden original como tie-breaker
+    for idx, p in enumerate(problemas):
+        p["_idx"] = idx
+
+    grupos_dict = {}  # nombre_tema_principal -> lista de problemas
+
+    for p in problemas:
+        tema_principal = calcular_tema_principal(p, temas)
+        p["_tema_principal"] = tema_principal
+        grupos_dict.setdefault(tema_principal, []).append(p)
+
+    # Orden de grupos: primero los temas en su orden, luego extra, luego 'Sin tema principal'
+    nombres_grupos_ordenados = []
+
+    nombres_temas = [t["nombre"] for t in temas]
+    for nombre in nombres_temas:
+        if nombre in grupos_dict:
+            nombres_grupos_ordenados.append(nombre)
+
+    otros = [
+        nombre for nombre in grupos_dict.keys()
+        if nombre not in nombres_grupos_ordenados
+        and nombre != "Sin tema principal"
+    ]
+    otros.sort()
+    nombres_grupos_ordenados.extend(otros)
+
+    if "Sin tema principal" in grupos_dict:
+        nombres_grupos_ordenados.append("Sin tema principal")
+
+    grupos = []
+    for nombre in nombres_grupos_ordenados:
+        lista = grupos_dict[nombre]
+
+        # Introductorios primero (etiqueta == 'introductorio', case-insensitive)
+        def es_introductorio(p):
+            return (p.get("etiqueta", "") or "").strip().lower() == "introductorio"
+
+        lista.sort(key=lambda p: (not es_introductorio(p), p["_idx"]))
+
+        grupos.append({
+            "nombre": nombre,
+            "problemas": lista,
+        })
+
+    return grupos
 
 def cargar_cursos():
     if not CURSOS_FILE.exists():
@@ -334,11 +413,13 @@ def mover_categoria_concurso(nombre, direccion):
     guardar_categorias_concursos(categorias)
     return redirect(url_for("lista_concursos"))
 
-
 @app.route("/problemas")
 def lista_problemas():
     problemas = cargar_problemas()
-    return render_template("problemas_list.html", problemas=problemas)
+    temas = cargar_temas()
+    grupos = agrupar_problemas_por_tema_principal(problemas, temas)
+    return render_template("problemas_list.html", grupos=grupos)
+
 
 @app.route("/problemas/nuevo", methods=["GET", "POST"])
 def nuevo_problema():
@@ -351,6 +432,7 @@ def nuevo_problema():
         concurso = request.form.get("concurso", "").strip()
         temas_seleccionados = request.form.getlist("temas")
         ruta_solucion = request.form["ruta_solucion"].strip()
+        etiqueta = request.form["etiqueta"].strip()
 
         problemas = cargar_problemas()
         if any(p["id"] == problema_id for p in problemas):
@@ -361,7 +443,8 @@ def nuevo_problema():
             "url": url_p,
             "concurso": concurso,
             "temas": temas_seleccionados,
-            "ruta_solucion": ruta_solucion
+            "ruta_solucion": ruta_solucion,
+            "etiqueta": etiqueta,
         })
         guardar_problemas(problemas)
         return redirect(url_for("lista_problemas"))
@@ -390,6 +473,7 @@ def editar_problema(problema_id):
         concurso = request.form.get("concurso", "").strip()
         temas_seleccionados = request.form.getlist("temas")
         ruta_solucion = request.form["ruta_solucion"].strip()
+        etiqueta = request.form["etiqueta"].strip()
 
         # validar que el nuevo ID no choque con otro problema distinto
         if nuevo_id != problema_id and any(p["id"] == nuevo_id for p in problemas):
@@ -400,6 +484,8 @@ def editar_problema(problema_id):
         problema["concurso"] = concurso
         problema["temas"] = temas_seleccionados
         problema["ruta_solucion"] = ruta_solucion
+        problema["etiqueta"] = etiqueta
+
 
         guardar_problemas(problemas)
         return redirect(url_for("lista_problemas"))
@@ -434,6 +520,36 @@ def ver_solucion_problema(problema_id):
 
     mime_type, _ = mimetypes.guess_type(str(file_path))
     return send_file(file_path, mimetype=mime_type or "application/octet-stream")
+
+@app.route("/problemas/mover/<problema_id>/<direccion>", methods=["POST"])
+def mover_problema(problema_id, direccion):
+    problemas = cargar_problemas()
+    temas = cargar_temas()
+
+    idx = next((i for i, p in enumerate(problemas) if p["id"] == problema_id), None)
+    if idx is None:
+        return "Problema no encontrado", 404
+
+    tema_main = calcular_tema_principal(problemas[idx], temas)
+
+    # Índices de todos los problemas con el mismo tema principal
+    indices_grupo = [
+        i for i, p in enumerate(problemas)
+        if calcular_tema_principal(p, temas) == tema_main
+    ]
+
+    pos = indices_grupo.index(idx)
+
+    if direccion == "up" and pos > 0:
+        other_idx = indices_grupo[pos - 1]
+        problemas[idx], problemas[other_idx] = problemas[other_idx], problemas[idx]
+    elif direccion == "down" and pos < len(indices_grupo) - 1:
+        other_idx = indices_grupo[pos + 1]
+        problemas[idx], problemas[other_idx] = problemas[other_idx], problemas[idx]
+
+    guardar_problemas(problemas)
+    return redirect(url_for("lista_problemas"))
+
 
 @app.route("/cursos")
 def lista_cursos():

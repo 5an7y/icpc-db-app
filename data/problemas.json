@@ -1,9 +1,98 @@
 [
-  {
-    "id": "CF_1080A",
-    "url": "https://codeforces.com/problemset/problem/1080/A",
-    "concurso": "Codeforces Round 1080",
-    "temas": ["Segment Tree", "Binary Search"],
-    "ruta_solucion": "./soluciones/CF_1080A.md"
-  }
+    {
+        "id": "CFGYM-106178A",
+        "url": "https://codeforces.com/gym/106178/problem/A",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Euler's Path"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178B",
+        "url": "https://codeforces.com/gym/106178/problem/B",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Divisibility",
+            "Actualization Points",
+            "Dynamic Programming"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178C",
+        "url": "https://codeforces.com/gym/106178/problem/C",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Segment Tree",
+            "Sweep Line"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178E",
+        "url": "https://codeforces.com/gym/106178/problem/E",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Buckets",
+            "Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178F",
+        "url": "https://codeforces.com/gym/106178/problem/F",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Prime Factorization",
+            "Big Numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178H",
+        "url": "https://codeforces.com/gym/106178/problem/H",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Implementation"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178J",
+        "url": "https://codeforces.com/gym/106178/problem/J",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Implementation"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178K",
+        "url": "https://codeforces.com/gym/106178/problem/K",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Greedy"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CFGYM-106178L",
+        "url": "https://codeforces.com/gym/106178/problem/L",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Divide & Conquer",
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    }
 ]

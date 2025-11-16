@@ -1,14 +1,92 @@
 [
     {
-        "nombre": "Segment Tree",
-        "categoria": "Estructuras de datos",
+        "nombre": "Implementation",
+        "categoria": "Basic",
+        "orden": 1,
+        "ruta": ""
+    },
+    {
+        "nombre": "Divisibility",
+        "categoria": "Math",
         "orden": 2,
-        "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
+        "ruta": ""
+    },
+    {
+        "nombre": "Greedy",
+        "categoria": "Basic",
+        "orden": 3,
+        "ruta": ""
+    },
+    {
+        "nombre": "Buckets",
+        "categoria": "Tecnicas",
+        "orden": 4,
+        "ruta": ""
     },
     {
         "nombre": "Binary Search",
         "categoria": "Tecnicas",
-        "orden": 1,
+        "orden": 5,
+        "ruta": ""
+    },
+    {
+        "nombre": "Actualization Points",
+        "categoria": "Tecnicas",
+        "orden": 6,
+        "ruta": ""
+    },
+    {
+        "nombre": "Prime Factorization",
+        "categoria": "Math",
+        "orden": 7,
+        "ruta": ""
+    },
+    {
+        "nombre": "Big Numbers",
+        "categoria": "Math",
+        "orden": 8,
+        "ruta": ""
+    },
+    {
+        "nombre": "Dynamic Programming",
+        "categoria": "Ad-Hoc",
+        "orden": 10,
+        "ruta": ""
+    },
+    {
+        "nombre": "Divide & Conquer",
+        "categoria": "Ad-Hoc",
+        "orden": 9,
+        "ruta": ""
+    },
+    {
+        "nombre": "Segment Tree",
+        "categoria": "Estructuras de datos",
+        "orden": 11,
+        "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
+    },
+    {
+        "nombre": "Sweep Line",
+        "categoria": "Ad-Hoc",
+        "orden": 12,
+        "ruta": ""
+    },
+    {
+        "nombre": "Ordered Set",
+        "categoria": "Ad-Hoc",
+        "orden": 13,
+        "ruta": ""
+    },
+    {
+        "nombre": "Basic Geometry",
+        "categoria": "Geometry",
+        "orden": 14,
+        "ruta": ""
+    },
+    {
+        "nombre": "Euler's Path",
+        "categoria": "Grafos",
+        "orden": 15,
         "ruta": ""
     }
 ]

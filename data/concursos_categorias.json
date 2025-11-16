@@ -1,10 +1,6 @@
 [
     {
-        "nombre": "ICPC Mexico",
+        "nombre": "ICPC Latam Regional",
         "orden": 1
-    },
-    {
-        "nombre": "Codeforces",
-        "orden": 2
     }
 ]

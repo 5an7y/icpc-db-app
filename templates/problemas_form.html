@@ -66,6 +66,17 @@
              placeholder="./soluciones/CF_1080A.md">
     </div>
 
+    <div class="mb-3">
+        <label class="form-label">Etiqueta (opcional)</label>
+        <input type="text" name="etiqueta" class="form-control"
+                value="{{ problema.etiqueta if problema and problema.etiqueta else '' }}"
+                placeholder="Ej. Introductorio, Clásico, Difícil...">
+        <div class="form-text">
+            Usa por ejemplo <code>Introductorio</code> para marcar problemas base de un tema.
+        </div>
+    </div>
+
+
     <button type="submit" class="btn btn-primary">
       Guardar
     </button>
