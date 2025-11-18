@@ -24,69 +24,153 @@
         "ruta": ""
     },
     {
-        "nombre": "Binary Search",
+        "nombre": "Two pointers",
         "categoria": "Tecnicas",
         "orden": 5,
         "ruta": ""
     },
     {
-        "nombre": "Actualization Points",
+        "nombre": "Binary Search",
         "categoria": "Tecnicas",
         "orden": 6,
         "ruta": ""
     },
     {
+        "nombre": "Actualization Points",
+        "categoria": "Tecnicas",
+        "orden": 7,
+        "ruta": ""
+    },
+    {
+        "nombre": "Prefix Array",
+        "categoria": "Tecnicas",
+        "orden": 8,
+        "ruta": ""
+    },
+    {
         "nombre": "Prime Factorization",
         "categoria": "Math",
-        "orden": 7,
+        "orden": 9,
         "ruta": ""
     },
     {
         "nombre": "Big Numbers",
         "categoria": "Math",
-        "orden": 8,
+        "orden": 10,
         "ruta": ""
     },
     {
-        "nombre": "Dynamic Programming",
+        "nombre": "Offline Queries",
+        "categoria": "Tecnicas",
+        "orden": 11,
+        "ruta": ""
+    },
+    {
+        "nombre": "Queue",
+        "categoria": "Estructuras de datos",
+        "orden": 12,
+        "ruta": ""
+    },
+    {
+        "nombre": "Stack",
+        "categoria": "Estructuras de datos",
+        "orden": 13,
+        "ruta": ""
+    },
+    {
+        "nombre": "Linked list",
+        "categoria": "Estructuras de datos",
+        "orden": 14,
+        "ruta": ""
+    },
+    {
+        "nombre": "Library Objects (Set. Map. Struct. etc)",
+        "categoria": "Basic",
+        "orden": 15,
+        "ruta": ""
+    },
+    {
+        "nombre": "Graphs Basics. DFS and BFS",
+        "categoria": "Grafos",
+        "orden": 16,
+        "ruta": ""
+    },
+    {
+        "nombre": "Backtracking",
         "categoria": "Ad-Hoc",
-        "orden": 10,
+        "orden": 17,
+        "ruta": ""
+    },
+    {
+        "nombre": "Combinatorics",
+        "categoria": "Math",
+        "orden": 18,
         "ruta": ""
     },
     {
         "nombre": "Divide & Conquer",
         "categoria": "Ad-Hoc",
-        "orden": 9,
+        "orden": 19,
         "ruta": ""
     },
     {
-        "nombre": "Segment Tree",
-        "categoria": "Estructuras de datos",
-        "orden": 11,
-        "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
-    },
-    {
-        "nombre": "Sweep Line",
+        "nombre": "Dynamic Programming",
         "categoria": "Ad-Hoc",
-        "orden": 12,
-        "ruta": ""
-    },
-    {
-        "nombre": "Ordered Set",
-        "categoria": "Ad-Hoc",
-        "orden": 13,
+        "orden": 20,
         "ruta": ""
     },
     {
         "nombre": "Basic Geometry",
         "categoria": "Geometry",
-        "orden": 14,
+        "orden": 21,
+        "ruta": ""
+    },
+    {
+        "nombre": "Tree Basics",
+        "categoria": "Grafos",
+        "orden": 22,
+        "ruta": ""
+    },
+    {
+        "nombre": "KMP. Z algorithm",
+        "categoria": "Strings",
+        "orden": 23,
+        "ruta": ""
+    },
+    {
+        "nombre": "DSU",
+        "categoria": "Grafos",
+        "orden": 24,
+        "ruta": ""
+    },
+    {
+        "nombre": "Segment Tree",
+        "categoria": "Estructuras de datos",
+        "orden": 25,
+        "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
+    },
+    {
+        "nombre": "Sweep Line",
+        "categoria": "Ad-Hoc",
+        "orden": 26,
+        "ruta": ""
+    },
+    {
+        "nombre": "Binary Exponentiation. Inverse Mod.",
+        "categoria": "Math",
+        "orden": 27,
+        "ruta": ""
+    },
+    {
+        "nombre": "Ordered Set",
+        "categoria": "Ad-Hoc",
+        "orden": 28,
         "ruta": ""
     },
     {
         "nombre": "Euler's Path",
         "categoria": "Grafos",
-        "orden": 15,
+        "orden": 29,
         "ruta": ""
     }
 ]

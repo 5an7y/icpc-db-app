@@ -1,15 +1,49 @@
 [
     {
-        "nombre": "ICPC 2025 Equipo A",
-        "descripcion": "Entrenamiento primer semestre 2025",
+        "nombre": "Gauss and Roses",
+        "descripcion": "Entrenamiento equipo Gauss and Roses ICPC Mexico 2025",
         "usados_problemas": [
-            "CF_1080A"
+            "CFGYM-106178H",
+            "CFGYM-106178J",
+            "CFGYM-106178K",
+            "CF-1209G1",
+            "ATCODER-abc125_c",
+            "CSES-1081",
+            "CFGYM-106178F",
+            "USACO-992",
+            "USACO-785",
+            "CFGYM-106178B",
+            "CSES-2189",
+            "CSES-2190",
+            "YOSUPO-count_points_in_triangle",
+            "YOSUPO-sort_points_by_argument",
+            "CSES-2192",
+            "SPOJ-FRNDCIRC",
+            "CF-150B",
+            "URAL-1671",
+            "CF-1213G",
+            "UVA-1099",
+            "CFGYM-106178E"
         ],
         "usados_temas": [
+            "Implementation",
+            "Divisibility",
+            "Greedy",
+            "Two pointers",
+            "Prefix Array",
+            "Prime Factorization",
+            "Big Numbers",
+            "Stack",
+            "Graphs Basics. DFS and BFS",
+            "Backtracking",
+            "Divide & Conquer",
+            "Dynamic Programming",
+            "Basic Geometry",
+            "DSU",
             "Segment Tree"
         ],
         "usados_concursos": [
-            "Codeforces Round 1080"
+            "ICPC Latam Regional 2025"
         ]
     }
 ]

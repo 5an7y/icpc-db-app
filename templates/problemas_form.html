@@ -10,10 +10,17 @@
 
   <form method="POST">
     <div class="mb-3">
-      <label class="form-label">ID del problema</label>
-      <input type="text" name="id" class="form-control"
-             value="{{ problema.id if problema else '' }}" required
-             placeholder="Ej. CF_1080A, UVA_1234, etc.">
+        <label class="form-label">Nombre del problema</label>
+        <input type="text" name="nombre" class="form-control"
+            value="{% if problema and 'nombre' in problema %}{{ problema.nombre }}{% endif %}"
+            placeholder="Ej. Polo the Penguin and Segments">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">ID del problema</label>
+        <input type="text" name="id" class="form-control"
+            value="{{ problema.id if problema else '' }}" required
+            placeholder="Ej. CF_1080A, UVA_1234, etc.">
     </div>
 
     <div class="mb-3">

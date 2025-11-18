@@ -1,6 +1,7 @@
 [
     {
         "id": "CFGYM-106178A",
+        "nombre": "Apple Pie",
         "url": "https://codeforces.com/gym/106178/problem/A",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -11,6 +12,7 @@
     },
     {
         "id": "CFGYM-106178B",
+        "nombre": "Balanced Balloons",
         "url": "https://codeforces.com/gym/106178/problem/B",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -23,6 +25,7 @@
     },
     {
         "id": "CFGYM-106178C",
+        "nombre": "Clean Streets",
         "url": "https://codeforces.com/gym/106178/problem/C",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -34,6 +37,7 @@
     },
     {
         "id": "CFGYM-106178E",
+        "nombre": "Emergency Rations",
         "url": "https://codeforces.com/gym/106178/problem/E",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -45,6 +49,7 @@
     },
     {
         "id": "CFGYM-106178F",
+        "nombre": "Fuzzy Factorization",
         "url": "https://codeforces.com/gym/106178/problem/F",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -56,6 +61,7 @@
     },
     {
         "id": "CFGYM-106178H",
+        "nombre": "Harder Horizons",
         "url": "https://codeforces.com/gym/106178/problem/H",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -66,6 +72,7 @@
     },
     {
         "id": "CFGYM-106178J",
+        "nombre": "Judgmental Crowd",
         "url": "https://codeforces.com/gym/106178/problem/J",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -76,6 +83,7 @@
     },
     {
         "id": "CFGYM-106178K",
+        "nombre": "Kings Conquest",
         "url": "https://codeforces.com/gym/106178/problem/K",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -85,7 +93,158 @@
         "etiqueta": ""
     },
     {
+        "id": "CSES-2189",
+        "nombre": "Point Location Test",
+        "url": "https://cses.fi/problemset/task/2189",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "SPOJ-FRNDCIRC",
+        "nombre": "FRIEND CIRCLE",
+        "url": "https://www.spoj.com/problems/FRNDCIRC/en/",
+        "concurso": "",
+        "temas": [
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-150B",
+        "nombre": "Quantity of Strings",
+        "url": "https://codeforces.com/problemset/problem/150/B",
+        "concurso": "",
+        "temas": [
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "URAL-1671",
+        "nombre": "Anansi's Cobweb",
+        "url": "https://acm.timus.ru/problem.aspx?space=1&num=1671",
+        "concurso": "",
+        "temas": [
+            "Offline Queries",
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-1213G",
+        "nombre": "Path Queries",
+        "url": "https://codeforces.com/problemset/problem/1213/G",
+        "concurso": "",
+        "temas": [
+            "Offline Queries",
+            "Tree Basics",
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-785",
+        "nombre": "Out of Place",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=785",
+        "concurso": "",
+        "temas": [
+            "Divide & Conquer"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-1209G1",
+        "nombre": "Into Blocks (easy version)",
+        "url": "https://codeforces.com/contest/1209/problem/G1",
+        "concurso": "",
+        "temas": [
+            "Greedy",
+            "Buckets",
+            "Two pointers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "DMOJ-ccc08s4",
+        "nombre": "Twenty-four",
+        "url": "https://dmoj.ca/problem/ccc08s4",
+        "concurso": "",
+        "temas": [
+            "Backtracking"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "PE-5",
+        "nombre": "Smallest Multiple",
+        "url": "https://projecteuler.net/problem=5",
+        "concurso": "",
+        "temas": [
+            "Divisibility"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "ATCODER-abc125_c",
+        "nombre": "GCD on Blackboard",
+        "url": "https://atcoder.jp/contests/abc125/tasks/abc125_c",
+        "concurso": "",
+        "temas": [
+            "Divisibility",
+            "Prefix Array"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "USACO-992",
+        "nombre": "Wormhole Sort",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=992",
+        "concurso": "",
+        "temas": [
+            "Binary Search",
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-1081",
+        "nombre": "Common Divisors",
+        "url": "https://cses.fi/problemset/task/1081",
+        "concurso": "",
+        "temas": [
+            "Prime Factorization"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "UVA-1099",
+        "nombre": "War",
+        "url": "https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1099",
+        "concurso": "",
+        "temas": [
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
         "id": "CFGYM-106178L",
+        "nombre": "Lonely Creatures",
         "url": "https://codeforces.com/gym/106178/problem/L",
         "concurso": "ICPC Latam Regional 2025",
         "temas": [
@@ -94,5 +253,173 @@
         ],
         "ruta_solucion": "",
         "etiqueta": ""
+    },
+    {
+        "id": "USACO-743",
+        "nombre": "Modern Art 2",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=743",
+        "concurso": "",
+        "temas": [
+            "Stack"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "SPOJ-NAJPF",
+        "nombre": "Pattern Find",
+        "url": "https://www.spoj.com/problems/NAJPF/",
+        "concurso": "",
+        "temas": [
+            "KMP. Z algorithm"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "UVA-455",
+        "nombre": "Periodic Strings",
+        "url": "https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396",
+        "concurso": "",
+        "temas": [
+            "KMP. Z algorithm"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-2192",
+        "nombre": "Point in Polygon",
+        "url": "https://cses.fi/problemset/task/2192",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-2190",
+        "nombre": "Line Segment Intersection",
+        "url": "https://cses.fi/problemset/task/2190",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "YOSUPO-count_points_in_triangle",
+        "nombre": "Count Points in Triangles",
+        "url": "https://judge.yosupo.jp/problem/count_points_in_triangle",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "LEETCODE-max-points-on-a-line",
+        "nombre": "Max Points on a Line",
+        "url": "https://leetcode.com/problems/max-points-on-a-line/description/",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-968",
+        "nombre": "Milk Visits",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=968",
+        "concurso": "",
+        "temas": [
+            "Tree Basics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-1462E1",
+        "nombre": "Close Tuples (hard version)",
+        "url": "https://codeforces.com/contest/1462/problem/E1",
+        "concurso": "",
+        "temas": [
+            "Two pointers",
+            "Combinatorics",
+            "Binary Exponentiation. Inverse Mod."
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-1716",
+        "nombre": "Distributing Apples",
+        "url": "https://cses.fi/problemset/task/1716",
+        "concurso": "",
+        "temas": [
+            "Combinatorics",
+            "Binary Exponentiation. Inverse Mod."
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1131",
+        "nombre": "Tree Diameter",
+        "url": "https://cses.fi/problemset/task/1131",
+        "concurso": "",
+        "temas": [
+            "Tree Basics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1132",
+        "nombre": "Tree Distances I",
+        "url": "https://cses.fi/problemset/task/1132",
+        "concurso": "",
+        "temas": [
+            "Tree Basics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1076",
+        "nombre": "Sliding Window Median",
+        "url": "https://cses.fi/problemset/task/1076",
+        "concurso": "",
+        "temas": [
+            "Library Objects (Set. Map. Struct. etc)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "URAL-1521",
+        "nombre": "War Games 2",
+        "url": "https://acm.timus.ru/problem.aspx?space=1&num=1521",
+        "concurso": "",
+        "temas": [
+            "Ordered Set"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "YOSUPO-sort_points_by_argument",
+        "nombre": "Sort Points by Argument",
+        "url": "https://judge.yosupo.jp/problem/sort_points_by_argument",
+        "concurso": "",
+        "temas": [
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
     }
 ]

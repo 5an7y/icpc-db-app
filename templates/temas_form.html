@@ -12,7 +12,10 @@
     <div class="mb-3">
       <label class="form-label">Nombre del tema</label>
       <input type="text" name="nombre" class="form-control"
-             value="{{ tema.nombre if tema else '' }}" required>
+        value="{{ tema.nombre if tema else '' }}"
+        required
+        pattern="^[^,]+$"
+        title="El nombre no puede contener comas (,).">
     </div>
 
     <div class="mb-3">

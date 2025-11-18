@@ -263,23 +263,38 @@ def eliminar_tema(nombre):
     guardar_temas(nuevos)
     return redirect(url_for("lista_temas"))
 
-@app.route("/temas/mover/<nombre>/<direccion>", methods=["POST"])
-def mover_tema(nombre, direccion):
-    temas = cargar_temas()  # ya viene ordenado por 'orden'
-    idx = next((i for i, t in enumerate(temas) if t["nombre"] == nombre), None)
+@app.route("/temas/orden", methods=["POST"])
+def guardar_orden_temas_route():
+    orden_str = request.form.get("orden", "") or ""
+    print("ORDEN RECIBIDO:", orden_str)  # <- ayuda para depurar en consola
 
-    if idx is None:
-        return "Tema no encontrado", 404
+    nombres = [n for n in orden_str.split(",") if n.strip()]
+    temas = cargar_temas()
+    tema_por_nombre = {t["nombre"]: t for t in temas}
 
-    if direccion == "up" and idx > 0:
-        # intercambiar orden con el de arriba
-        temas[idx]["orden"], temas[idx - 1]["orden"] = temas[idx - 1]["orden"], temas[idx]["orden"]
-    elif direccion == "down" and idx < len(temas) - 1:
-        # intercambiar orden con el de abajo
-        temas[idx]["orden"], temas[idx + 1]["orden"] = temas[idx + 1]["orden"], temas[idx]["orden"]
+    nuevos = []
+    orden_val = 1
 
-    guardar_temas(temas)
+    # Asignar orden según la lista que viene del frontend
+    for nombre in nombres:
+        tema = tema_por_nombre.get(nombre)
+        if not tema:
+            continue
+        tema["orden"] = orden_val
+        orden_val += 1
+        nuevos.append(tema)
+
+    # Si por alguna razón hay temas que no llegaron en la lista (caso raro),
+    # los mandamos al final, conservando su orden relativo anterior.
+    for t in temas:
+        if t["nombre"] not in nombres:
+            t["orden"] = orden_val
+            orden_val += 1
+            nuevos.append(t)
+
+    guardar_temas(nuevos)
     return redirect(url_for("lista_temas"))
+
 
 @app.route("/temas/ver/<nombre>")
 def ver_tema(nombre):
@@ -427,6 +442,7 @@ def nuevo_problema():
     concursos = cargar_concursos()
 
     if request.method == "POST":
+        nombre = request.form["nombre"].strip()
         problema_id = request.form["id"].strip()
         url_p = request.form["url"].strip()
         concurso = request.form.get("concurso", "").strip()
@@ -440,6 +456,7 @@ def nuevo_problema():
 
         problemas.append({
             "id": problema_id,
+            "nombre": nombre,
             "url": url_p,
             "concurso": concurso,
             "temas": temas_seleccionados,
@@ -468,6 +485,7 @@ def editar_problema(problema_id):
         return "Problema no encontrado", 404
 
     if request.method == "POST":
+        nombre = request.form["nombre"].strip()
         nuevo_id = request.form["id"].strip()
         url_p = request.form["url"].strip()
         concurso = request.form.get("concurso", "").strip()
@@ -479,13 +497,13 @@ def editar_problema(problema_id):
         if nuevo_id != problema_id and any(p["id"] == nuevo_id for p in problemas):
             return "Ya existe otro problema con ese ID", 400
 
+        problema["nombre"] = nombre
         problema["id"] = nuevo_id
         problema["url"] = url_p
         problema["concurso"] = concurso
         problema["temas"] = temas_seleccionados
         problema["ruta_solucion"] = ruta_solucion
         problema["etiqueta"] = etiqueta
-
 
         guardar_problemas(problemas)
         return redirect(url_for("lista_problemas"))
@@ -632,12 +650,15 @@ def gestionar_curso(nombre):
         guardar_cursos(cursos)
         return redirect(url_for("gestionar_curso", nombre=curso["nombre"]))
 
+    # Agrupar problemas por tema principal, en el mismo orden que en /problemas
+    grupos_problemas = agrupar_problemas_por_tema_principal(problemas, temas)
+
     return render_template(
         "curso_usos.html",
         curso=curso,
         temas=temas,
         concursos=concursos,
-        problemas=problemas,
+        grupos_problemas=grupos_problemas,
     )
 
 if __name__ == "__main__":

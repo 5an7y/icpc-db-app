@@ -9,38 +9,100 @@
 </div>
 
 <form method="POST">
-  <!-- PROBLEMAS -->
+  <!-- PROBLEMAS + TEMAS -->
   <div class="card mb-3">
     <div class="card-header">
-      <strong>Problemas usados</strong>
+      <strong>Problemas y temas</strong>
       <span class="text-muted ms-2">
-        (marca los problemas que ya usaste en este curso)
+        (marca los problemas que ya usaste y los temas que ya cubriste en este curso)
       </span>
     </div>
-    <div class="card-body" style="max-height: 300px; overflow-y: auto;">
-      {% if problemas %}
-        {% for p in problemas %}
-          {% set checked = p.id in (curso.usados_problemas or []) %}
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-                   name="usados_problemas" id="prob_{{ loop.index }}"
-                   value="{{ p.id }}" {% if checked %}checked{% endif %}>
-            <label class="form-check-label" for="prob_{{ loop.index }}">
-              <code>{{ p.id }}</code>
-              {% if p.concurso %} — {{ p.concurso }}{% endif %}
-              {% if p.temas %}
+    <div class="card-body" style="max-height: 550px; overflow-y: auto;">
+      {% if grupos_problemas %}
+        {% for grupo in grupos_problemas %}
+          {% set tema_marcado = grupo.nombre in (curso.usados_temas or []) %}
+
+          <div class="mb-2">
+            <!-- Encabezado del tema con checkbox de 'tema visto' -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <div class="fw-semibold">
+                {{ grupo.nombre }}
                 <span class="text-muted">
-                  ({{ p.temas|join(", ") }})
+                  ({{ grupo.problemas|length }} problema{{ '' if grupo.problemas|length == 1 else 's' }})
                 </span>
-              {% endif %}
-            </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input"
+                       type="checkbox"
+                       name="usados_temas"
+                       id="tema_{{ loop.index }}"
+                       value="{{ grupo.nombre }}"
+                       {% if tema_marcado %}checked{% endif %}>
+                <label class="form-check-label" for="tema_{{ loop.index }}">
+                  Tema visto en este curso
+                </label>
+              </div>
+            </div>
+
+            <!-- Lista de problemas de este tema -->
+            {% for p in grupo.problemas %}
+              {% set checked = p.id in (curso.usados_problemas or []) %}
+              {% set es_intro = (p.etiqueta or '')|lower == 'introductorio' %}
+              {% set usado_concurso = p.concurso and (p.concurso in (curso.usados_concursos or [])) %}
+
+              <div class="form-check ms-3 {% if es_intro %}bg-success bg-opacity-10 rounded px-2{% endif %}">
+                <input class="form-check-input"
+                       type="checkbox"
+                       name="usados_problemas"
+                       id="prob_{{ grupo.nombre|replace(' ', '_') }}_{{ loop.index }}"
+                       value="{{ p.id }}"
+                       {% if checked %}checked{% endif %}>
+                <label class="form-check-label"
+                       for="prob_{{ grupo.nombre|replace(' ', '_') }}_{{ loop.index }}">
+                  {% set tiene_nombre = p.nombre is defined and p.nombre %}
+                  {% if p.url %}
+                    <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer"
+                       class="text-decoration-none">
+                      {{ p.nombre if tiene_nombre else p.id }}
+                    </a>
+                  {% else %}
+                    {{ p.nombre if tiene_nombre else p.id }}
+                  {% endif %}
+                  <span class="text-muted ms-1">
+                    (<code>{{ p.id }}</code>)
+                  </span>
+
+                  {% if p.concurso %}
+                    <span class="{% if usado_concurso %}text-muted{% else %}text-danger fw-semibold{% endif %} ms-1">
+                      — {{ p.concurso }}
+                    </span>
+                  {% endif %}
+
+                  {% if p.temas %}
+                    <span class="text-muted">
+                      ({{ p.temas|join(", ") }})
+                    </span>
+                  {% endif %}
+
+                  {% if es_intro %}
+                    <span class="badge bg-primary ms-1">Introductorio</span>
+                  {% endif %}
+                </label>
+              </div>
+            {% endfor %}
           </div>
+
+          {% if not loop.last %}
+            <hr class="my-2">
+          {% endif %}
         {% endfor %}
       {% else %}
         <p class="text-muted mb-0">No hay problemas registrados.</p>
       {% endif %}
     </div>
   </div>
+
 
   <!-- CONCURSOS -->
   <div class="card mb-3">
@@ -68,34 +130,6 @@
         {% endfor %}
       {% else %}
         <p class="text-muted mb-0">No hay concursos registrados.</p>
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- TEMAS -->
-  <div class="card mb-3">
-    <div class="card-header">
-      <strong>Temas cubiertos</strong>
-      <span class="text-muted ms-2">
-        (marca los temas que ya has visto en este curso)
-      </span>
-    </div>
-    <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-      {% if temas %}
-        {% for t in temas %}
-          {% set checked = t.nombre in (curso.usados_temas or []) %}
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-                   name="usados_temas" id="tema_{{ loop.index }}"
-                   value="{{ t.nombre }}" {% if checked %}checked{% endif %}>
-            <label class="form-check-label" for="tema_{{ loop.index }}">
-              {{ t.nombre }}
-              <span class="text-muted">({{ t.categoria }})</span>
-            </label>
-          </div>
-        {% endfor %}
-      {% else %}
-        <p class="text-muted mb-0">No hay temas registrados.</p>
       {% endif %}
     </div>
   </div>

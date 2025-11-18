@@ -23,14 +23,14 @@
         <tbody>
           {% for c in cursos %}
             <tr>
-              <td>{{ c.nombre }}</td>
+              <td>
+                <a href="{{ url_for('gestionar_curso', nombre=c.nombre) }}"
+                    class="text-decoration-none">
+                    {{ c.nombre }}
+                </a>
+              </td>
               <td>{{ c.descripcion or "—" }}</td>
               <td class="text-nowrap">
-                <a href="{{ url_for('gestionar_curso', nombre=c.nombre) }}"
-                   class="btn btn-sm btn-outline-secondary">
-                  Usos
-                </a>
-
                 <a href="{{ url_for('editar_curso', nombre=c.nombre) }}"
                    class="btn btn-sm btn-primary ms-1">
                   Editar

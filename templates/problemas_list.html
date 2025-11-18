@@ -34,12 +34,11 @@
               <table class="table table-striped table-hover align-middle mb-0">
                 <thead class="table-light">
                   <tr>
-                    <th style="width: 8rem;">ID</th>
-                    <th>Enunciado</th>
+                    <th>Nombre</th>
                     <th>Concurso</th>
                     <th>Temas</th>
                     <th style="width: 8rem;">Etiqueta</th>
-                    <th style="width: 10rem;">Solución</th>
+                    <th style="width: 8rem;">Solución</th>
                     <th style="width: 14rem;">Acciones</th>
                   </tr>
                 </thead>
@@ -47,15 +46,18 @@
                   {% for p in grupo.problemas %}
                     {% set es_intro = (p.etiqueta or '')|lower == 'introductorio' %}
                     <tr class="{% if es_intro %}table-success{% endif %}">
-                      <td><code>{{ p.id }}</code></td>
                       <td>
+                        {% set tiene_nombre = p.nombre is defined and p.nombre %}
                         {% if p.url %}
-                          <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
-                            Abrir problema
-                          </a>
+                            <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+                            {{ p.nombre if tiene_nombre else p.id }}
+                            </a>
                         {% else %}
-                          <span class="text-muted">Sin URL</span>
+                            {{ p.nombre if tiene_nombre else p.id }}
                         {% endif %}
+                        <span class="text-muted ms-1">
+                            (<code>{{ p.id }}</code>)
+                        </span>
                       </td>
                       <td>{{ p.concurso or "—" }}</td>
                       <td>
