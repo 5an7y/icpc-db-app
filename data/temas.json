@@ -90,87 +90,153 @@
         "ruta": ""
     },
     {
-        "nombre": "Graphs Basics. DFS and BFS",
-        "categoria": "Grafos",
+        "nombre": "Interactive",
+        "categoria": "Ad-Hoc",
         "orden": 16,
         "ruta": ""
     },
     {
-        "nombre": "Backtracking",
-        "categoria": "Ad-Hoc",
+        "nombre": "Graphs Basics. DFS and BFS",
+        "categoria": "Grafos",
         "orden": 17,
         "ruta": ""
     },
     {
-        "nombre": "Combinatorics",
+        "nombre": "Binary numbers",
         "categoria": "Math",
         "orden": 18,
         "ruta": ""
     },
     {
-        "nombre": "Divide & Conquer",
+        "nombre": "Backtracking",
         "categoria": "Ad-Hoc",
         "orden": 19,
         "ruta": ""
     },
     {
-        "nombre": "Dynamic Programming",
+        "nombre": "Sweep Line",
         "categoria": "Ad-Hoc",
         "orden": 20,
         "ruta": ""
     },
     {
+        "nombre": "Combinatorics",
+        "categoria": "Math",
+        "orden": 21,
+        "ruta": ""
+    },
+    {
+        "nombre": "Divide & Conquer",
+        "categoria": "Ad-Hoc",
+        "orden": 22,
+        "ruta": ""
+    },
+    {
+        "nombre": "Dynamic Programming",
+        "categoria": "Ad-Hoc",
+        "orden": 23,
+        "ruta": ""
+    },
+    {
         "nombre": "Basic Geometry",
         "categoria": "Geometry",
-        "orden": 21,
+        "orden": 24,
         "ruta": ""
     },
     {
         "nombre": "Tree Basics",
         "categoria": "Grafos",
-        "orden": 22,
+        "orden": 25,
         "ruta": ""
     },
     {
         "nombre": "KMP. Z algorithm",
         "categoria": "Strings",
-        "orden": 23,
+        "orden": 26,
         "ruta": ""
     },
     {
         "nombre": "DSU",
         "categoria": "Grafos",
-        "orden": 24,
+        "orden": 27,
         "ruta": ""
     },
     {
         "nombre": "Segment Tree",
         "categoria": "Estructuras de datos",
-        "orden": 25,
+        "orden": 28,
         "ruta": "./temas/EstructurasDeDatos/SegmentTree.md"
-    },
-    {
-        "nombre": "Sweep Line",
-        "categoria": "Ad-Hoc",
-        "orden": 26,
-        "ruta": ""
     },
     {
         "nombre": "Binary Exponentiation. Inverse Mod.",
         "categoria": "Math",
-        "orden": 27,
+        "orden": 29,
+        "ruta": ""
+    },
+    {
+        "nombre": "LCA",
+        "categoria": "Grafos",
+        "orden": 30,
+        "ruta": ""
+    },
+    {
+        "nombre": "Hashing",
+        "categoria": "Strings",
+        "orden": 31,
         "ruta": ""
     },
     {
         "nombre": "Ordered Set",
         "categoria": "Ad-Hoc",
-        "orden": 28,
+        "orden": 32,
+        "ruta": ""
+    },
+    {
+        "nombre": "Mo's Algoritm (sqrt)",
+        "categoria": "Ad-Hoc",
+        "orden": 33,
+        "ruta": ""
+    },
+    {
+        "nombre": "Inclusion-Exclusion",
+        "categoria": "Math",
+        "orden": 34,
+        "ruta": ""
+    },
+    {
+        "nombre": "Trie",
+        "categoria": "Estructuras de datos",
+        "orden": 35,
+        "ruta": ""
+    },
+    {
+        "nombre": "Convex Hull",
+        "categoria": "Geometry",
+        "orden": 36,
+        "ruta": ""
+    },
+    {
+        "nombre": "Suffix Automata",
+        "categoria": "Strings",
+        "orden": 37,
         "ruta": ""
     },
     {
         "nombre": "Euler's Path",
         "categoria": "Grafos",
-        "orden": 29,
+        "orden": 38,
+        "ruta": ""
+    },
+    {
+        "nombre": "Suffix Array - LCP",
+        "categoria": "Strings",
+        "orden": 39,
+        "ruta": ""
+    },
+    {
+        "nombre": "Advanced Segment Tree",
+        "categoria": "Estructuras de datos",
+        "orden": 40,
         "ruta": ""
     }
 ]

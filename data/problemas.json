@@ -24,24 +24,23 @@
         "etiqueta": ""
     },
     {
-        "id": "CFGYM-106178C",
-        "nombre": "Clean Streets",
-        "url": "https://codeforces.com/gym/106178/problem/C",
-        "concurso": "ICPC Latam Regional 2025",
+        "id": "CSES-1143",
+        "nombre": "Hotel Queries",
+        "url": "https://cses.fi/problemset/task/1143",
+        "concurso": "",
         "temas": [
-            "Segment Tree",
-            "Sweep Line"
+            "Segment Tree"
         ],
         "ruta_solucion": "",
-        "etiqueta": ""
+        "etiqueta": "Introductorio"
     },
     {
-        "id": "CFGYM-106178E",
-        "nombre": "Emergency Rations",
-        "url": "https://codeforces.com/gym/106178/problem/E",
-        "concurso": "ICPC Latam Regional 2025",
+        "id": "CF-242E",
+        "nombre": "XOR on Segment",
+        "url": "https://codeforces.com/contest/242/problem/E",
+        "concurso": "",
         "temas": [
-            "Buckets",
+            "Binary numbers",
             "Segment Tree"
         ],
         "ruta_solucion": "",
@@ -138,17 +137,15 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "CF-1213G",
-        "nombre": "Path Queries",
-        "url": "https://codeforces.com/problemset/problem/1213/G",
+        "id": "USACO-788",
+        "nombre": "MooTube",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=788",
         "concurso": "",
         "temas": [
-            "Offline Queries",
-            "Tree Basics",
             "DSU"
         ],
         "ruta_solucion": "",
-        "etiqueta": ""
+        "etiqueta": "Nah"
     },
     {
         "id": "USACO-785",
@@ -209,12 +206,11 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "USACO-992",
-        "nombre": "Wormhole Sort",
-        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=992",
+        "id": "CF-1833E",
+        "nombre": "Round Dance",
+        "url": "https://codeforces.com/contest/1833/problem/E",
         "concurso": "",
         "temas": [
-            "Binary Search",
             "Graphs Basics. DFS and BFS"
         ],
         "ruta_solucion": "",
@@ -232,9 +228,9 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "UVA-1099",
-        "nombre": "War",
-        "url": "https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1099",
+        "id": "CF-468B",
+        "nombre": "Two Sets",
+        "url": "https://codeforces.com/contest/468/problem/B",
         "concurso": "",
         "temas": [
             "DSU"
@@ -243,12 +239,11 @@
         "etiqueta": ""
     },
     {
-        "id": "CFGYM-106178L",
-        "nombre": "Lonely Creatures",
-        "url": "https://codeforces.com/gym/106178/problem/L",
-        "concurso": "ICPC Latam Regional 2025",
+        "id": "LEETCODE-max-points-on-a-line",
+        "nombre": "Max Points on a Line",
+        "url": "https://leetcode.com/problems/max-points-on-a-line/description/",
+        "concurso": "",
         "temas": [
-            "Divide & Conquer",
             "Basic Geometry"
         ],
         "ruta_solucion": "",
@@ -299,6 +294,18 @@
         "etiqueta": ""
     },
     {
+        "id": "CFGYM-106178L",
+        "nombre": "Lonely Creatures",
+        "url": "https://codeforces.com/gym/106178/problem/L",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Divide & Conquer",
+            "Basic Geometry"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
         "id": "CSES-2190",
         "nombre": "Line Segment Intersection",
         "url": "https://cses.fi/problemset/task/2190",
@@ -321,26 +328,15 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "LEETCODE-max-points-on-a-line",
-        "nombre": "Max Points on a Line",
-        "url": "https://leetcode.com/problems/max-points-on-a-line/description/",
-        "concurso": "",
-        "temas": [
-            "Basic Geometry"
-        ],
-        "ruta_solucion": "",
-        "etiqueta": ""
-    },
-    {
-        "id": "USACO-968",
-        "nombre": "Milk Visits",
-        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=968",
+        "id": "CSES-1131",
+        "nombre": "Tree Diameter",
+        "url": "https://cses.fi/problemset/task/1131",
         "concurso": "",
         "temas": [
             "Tree Basics"
         ],
         "ruta_solucion": "",
-        "etiqueta": ""
+        "etiqueta": "Introductorio"
     },
     {
         "id": "CF-1462E1",
@@ -368,26 +364,26 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "CSES-1131",
-        "nombre": "Tree Diameter",
-        "url": "https://cses.fi/problemset/task/1131",
+        "id": "CODECHEF-DRGHTS",
+        "nombre": "Draughts",
+        "url": "https://www.codechef.com/problems/DRGHTS",
         "concurso": "",
         "temas": [
             "Tree Basics"
         ],
         "ruta_solucion": "",
-        "etiqueta": "Introductorio"
+        "etiqueta": ""
     },
     {
-        "id": "CSES-1132",
-        "nombre": "Tree Distances I",
-        "url": "https://cses.fi/problemset/task/1132",
+        "id": "USACO-968",
+        "nombre": "Milk Visits",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=968",
         "concurso": "",
         "temas": [
             "Tree Basics"
         ],
         "ruta_solucion": "",
-        "etiqueta": "Introductorio"
+        "etiqueta": ""
     },
     {
         "id": "CSES-1076",
@@ -421,5 +417,478 @@
         ],
         "ruta_solucion": "",
         "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-1213G",
+        "nombre": "Path Queries",
+        "url": "https://codeforces.com/problemset/problem/1213/G",
+        "concurso": "",
+        "temas": [
+            "Offline Queries",
+            "Tree Basics",
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-1085",
+        "nombre": "Just Stalling",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1085",
+        "concurso": "",
+        "temas": [
+            "Combinatorics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1132",
+        "nombre": "Tree Distances I",
+        "url": "https://cses.fi/problemset/task/1132",
+        "concurso": "",
+        "temas": [
+            "Tree Basics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-668D",
+        "nombre": "Little Artem and Time Machine",
+        "url": "https://codeforces.com/contest/668/problem/D",
+        "concurso": "",
+        "temas": [
+            "Ordered Set"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-346B",
+        "nombre": "Lucky Common Subsequence",
+        "url": "https://codeforces.com/contest/346/problem/B",
+        "concurso": "",
+        "temas": [
+            "Dynamic Programming",
+            "KMP. Z algorithm"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "csacademy-mountain-time",
+        "nombre": "Mountain Time",
+        "url": "https://csacademy.com/contest/archive/task/mountain-time",
+        "concurso": "",
+        "temas": [
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "BOI-201905",
+        "nombre": "Necklace",
+        "url": "https://boi2019.eio.ee/wp-content/uploads/2019/05/necklace.sol_.en_.pdf",
+        "concurso": "",
+        "temas": [
+            "KMP. Z algorithm"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "UVA-1099",
+        "nombre": "War",
+        "url": "https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1099",
+        "concurso": "",
+        "temas": [
+            "DSU"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-1018",
+        "nombre": "Help Yourself",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=1018",
+        "concurso": "",
+        "temas": [
+            "Buckets",
+            "Combinatorics"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "IOI-2002P1",
+        "nombre": "The Troublesome Frog",
+        "url": "https://ioi.contest.codeforces.com/group/32KGsXgiKA/contest/103699/problem/A",
+        "concurso": "",
+        "temas": [
+            "Buckets"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "Kattis-hashing",
+        "nombre": "String Hashing",
+        "url": "https://open.kattis.com/problems/hashing",
+        "concurso": "",
+        "temas": [
+            "Hashing"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "KATTIS-convexhull",
+        "nombre": "Convex Hull",
+        "url": "https://open.kattis.com/problems/convexhull",
+        "concurso": "",
+        "temas": [
+            "Convex Hull"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CFGYM-106178E",
+        "nombre": "Emergency Rations",
+        "url": "https://codeforces.com/gym/106178/problem/E",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Buckets",
+            "Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-1190",
+        "nombre": "Subarray Sum Queries",
+        "url": "https://cses.fi/problemset/task/1190",
+        "concurso": "",
+        "temas": [
+            "Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-382",
+        "nombre": "Cow Curling",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=382",
+        "concurso": "",
+        "temas": [
+            "Convex Hull"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-271D",
+        "nombre": "Good Substrings",
+        "url": "https://codeforces.com/contest/271/problem/D",
+        "concurso": "",
+        "temas": [
+            "Hashing"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CFGYM-106178C",
+        "nombre": "Clean Streets",
+        "url": "https://codeforces.com/gym/106178/problem/C",
+        "concurso": "ICPC Latam Regional 2025",
+        "temas": [
+            "Segment Tree",
+            "Sweep Line"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CODECHEF-INSQ15_A",
+        "nombre": "The Gift Of Raksha Bandhan",
+        "url": "https://www.codechef.com/problems/INSQ15_A",
+        "concurso": "",
+        "temas": [
+            "Binary Search",
+            "Hashing"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CODECHEF-INSQ15_A-copy",
+        "nombre": "The Gift Of Raksha Bandhan",
+        "url": "https://www.codechef.com/problems/INSQ15_A",
+        "concurso": "",
+        "temas": [
+            "Suffix Array - LCP"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "USACO-992",
+        "nombre": "Wormhole Sort",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=992",
+        "concurso": "",
+        "temas": [
+            "Binary Search",
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "OMEGAUP-OMI-2017-Operaciones",
+        "nombre": "Truco Asombroso",
+        "url": "https://omegaup.com/arena/problem/OMI-2017-Operaciones",
+        "concurso": "",
+        "temas": [
+            "Binary numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "IOI-2009P6",
+        "nombre": "Mecho",
+        "url": "https://ioi.contest.codeforces.com/group/32KGsXgiKA/contest/103755/problem/F",
+        "concurso": "",
+        "temas": [
+            "Binary Search",
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-1368D",
+        "nombre": "AND, OR and square sum",
+        "url": "https://codeforces.com/contest/1368/problem/D",
+        "concurso": "",
+        "temas": [
+            "Binary numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "ATCODER-abc197_f",
+        "nombre": "Construct a Palindrome",
+        "url": "https://atcoder.jp/contests/abc197/tasks/abc197_f",
+        "concurso": "",
+        "temas": [
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-2185",
+        "nombre": "Prime Multiples",
+        "url": "https://cses.fi/problemset/task/2185",
+        "concurso": "",
+        "temas": [
+            "Inclusion-Exclusion"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1707",
+        "nombre": "Graph Girth",
+        "url": "https://cses.fi/problemset/task/1707",
+        "concurso": "",
+        "temas": [
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-1270C",
+        "nombre": "Make Good",
+        "url": "https://codeforces.com/problemset/problem/1270/C",
+        "concurso": "",
+        "temas": [
+            "Binary numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "IOI-2000P4",
+        "nombre": "Walls",
+        "url": "https://dmoj.ca/problem/ioi00p4",
+        "concurso": "",
+        "temas": [
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-55E",
+        "nombre": "Very simple problem",
+        "url": "https://codeforces.com/contest/55/problem/E",
+        "concurso": "",
+        "temas": [
+            "Convex Hull"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "ATCODER-abc295_d",
+        "nombre": "Three Days Ago",
+        "url": "https://atcoder.jp/contests/abc295/tasks/abc295_d",
+        "concurso": "",
+        "temas": [
+            "Binary numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "SPOJ-KQUERY",
+        "nombre": "K-query",
+        "url": "https://www.spoj.com/problems/KQUERY/",
+        "concurso": "",
+        "temas": [
+            "Mo's Algoritm (sqrt)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "SPOJ-KQUERYO",
+        "nombre": "K-Query Online",
+        "url": "https://www.spoj.com/problems/KQUERYO/",
+        "concurso": "",
+        "temas": [
+            "Advanced Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-1088D",
+        "nombre": "Ehab and another another xor problem",
+        "url": "https://codeforces.com/problemset/problem/1088/D",
+        "concurso": "",
+        "temas": [
+            "Interactive",
+            "Binary numbers"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "USACO-620",
+        "nombre": "Milk Pails",
+        "url": "https://usaco.org/index.php?page=viewproblem2&cpid=620",
+        "concurso": "",
+        "temas": [
+            "Graphs Basics. DFS and BFS"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-2166",
+        "nombre": "Prefix Sum Queries",
+        "url": "https://cses.fi/problemset/task/2166",
+        "concurso": "",
+        "temas": [
+            "Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-2102",
+        "nombre": "Finding Patterns",
+        "url": "https://cses.fi/problemset/task/2102",
+        "concurso": "",
+        "temas": [
+            "Suffix Automata"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "atcoder-arc097_a",
+        "nombre": "K-th Substring",
+        "url": "https://atcoder.jp/contests/abc097/tasks/arc097_a",
+        "concurso": "",
+        "temas": [
+            "Suffix Automata"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1731",
+        "nombre": "Word Combinations",
+        "url": "https://cses.fi/problemset/task/1731",
+        "concurso": "",
+        "temas": [
+            "Dynamic Programming",
+            "Trie"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "LEETCODE-kth-ancestor-of-a-tree-node",
+        "nombre": "Kth Ancestor of a Tree Node",
+        "url": "https://leetcode.com/problems/kth-ancestor-of-a-tree-node/description/",
+        "concurso": "",
+        "temas": [
+            "LCA"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1135",
+        "nombre": "Distance Queries",
+        "url": "https://cses.fi/problemset/task/1135",
+        "concurso": "",
+        "temas": [
+            "LCA"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-1142B",
+        "nombre": "Lynyrd Skynyrd",
+        "url": "https://codeforces.com/contest/1142/problem/B",
+        "concurso": "",
+        "temas": [
+            "LCA"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CODECHEF-LGSEG",
+        "nombre": "Longest Good Segment",
+        "url": "https://www.codechef.com/problems/LGSEG",
+        "concurso": "",
+        "temas": [
+            "LCA"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
     }
 ]
