@@ -174,7 +174,7 @@
         "ruta": ""
     },
     {
-        "nombre": "LCA",
+        "nombre": "Tree Flaten (Eulers Tour)",
         "categoria": "Grafos",
         "orden": 30,
         "ruta": ""
@@ -186,57 +186,81 @@
         "ruta": ""
     },
     {
-        "nombre": "Ordered Set",
-        "categoria": "Ad-Hoc",
+        "nombre": "LCA",
+        "categoria": "Grafos",
         "orden": 32,
         "ruta": ""
     },
     {
-        "nombre": "Mo's Algoritm (sqrt)",
+        "nombre": "Ordered Set",
         "categoria": "Ad-Hoc",
         "orden": 33,
         "ruta": ""
     },
     {
+        "nombre": "Mo's Algoritm (sqrt)",
+        "categoria": "Ad-Hoc",
+        "orden": 34,
+        "ruta": ""
+    },
+    {
         "nombre": "Inclusion-Exclusion",
         "categoria": "Math",
-        "orden": 34,
+        "orden": 35,
         "ruta": ""
     },
     {
         "nombre": "Trie",
         "categoria": "Estructuras de datos",
-        "orden": 35,
+        "orden": 36,
         "ruta": ""
     },
     {
         "nombre": "Convex Hull",
         "categoria": "Geometry",
-        "orden": 36,
+        "orden": 37,
         "ruta": ""
     },
     {
         "nombre": "Suffix Automata",
         "categoria": "Strings",
-        "orden": 37,
+        "orden": 38,
         "ruta": ""
     },
     {
         "nombre": "Euler's Path",
         "categoria": "Grafos",
-        "orden": 38,
+        "orden": 39,
+        "ruta": ""
+    },
+    {
+        "nombre": "Heavy-Light decomposition",
+        "categoria": "Grafos",
+        "orden": 40,
         "ruta": ""
     },
     {
         "nombre": "Suffix Array - LCP",
         "categoria": "Strings",
-        "orden": 39,
+        "orden": 41,
         "ruta": ""
     },
     {
         "nombre": "Advanced Segment Tree",
         "categoria": "Estructuras de datos",
-        "orden": 40,
+        "orden": 42,
+        "ruta": ""
+    },
+    {
+        "nombre": "LiChao Tree. Convex Trick",
+        "categoria": "Geometry",
+        "orden": 43,
+        "ruta": ""
+    },
+    {
+        "nombre": "Sack (dsu on tree)",
+        "categoria": "Grafos",
+        "orden": 44,
         "ruta": ""
     }
 ]

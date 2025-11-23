@@ -803,15 +803,15 @@
         "etiqueta": "Introductorio"
     },
     {
-        "id": "CSES-2166",
-        "nombre": "Prefix Sum Queries",
-        "url": "https://cses.fi/problemset/task/2166",
+        "id": "CF-380C",
+        "nombre": "Sereja and Brackets",
+        "url": "https://codeforces.com/problemset/problem/380/C",
         "concurso": "",
         "temas": [
             "Segment Tree"
         ],
         "ruta_solucion": "",
-        "etiqueta": "Introductorio"
+        "etiqueta": ""
     },
     {
         "id": "CSES-2102",
@@ -890,5 +890,127 @@
         ],
         "ruta_solucion": "",
         "etiqueta": ""
+    },
+    {
+        "id": "CF-600E",
+        "nombre": "Lomsat gelral",
+        "url": "https://codeforces.com/contest/600/problem/E",
+        "concurso": "",
+        "temas": [
+            "Sack (dsu on tree)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-570D",
+        "nombre": "Tree Requests",
+        "url": "https://codeforces.com/contest/570/problem/D",
+        "concurso": "",
+        "temas": [
+            "Binary numbers",
+            "Tree Flaten (Eulers Tour)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-570D-COPY",
+        "nombre": "Tree Requests",
+        "url": "https://codeforces.com/contest/570/problem/D",
+        "concurso": "",
+        "temas": [
+            "Sack (dsu on tree)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CF-161D",
+        "nombre": "Distance in Tree",
+        "url": "https://codeforces.com/contest/161/problem/D",
+        "concurso": "",
+        "temas": [
+            "Sack (dsu on tree)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-246E",
+        "nombre": "Blood Cousins Return",
+        "url": "https://codeforces.com/contest/246/problem/E",
+        "concurso": "",
+        "temas": [
+            "Sack (dsu on tree)"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "YOSUPO-line_add_get_min",
+        "nombre": "Line Add Get Min",
+        "url": "https://judge.yosupo.jp/problem/line_add_get_min",
+        "concurso": "",
+        "temas": [
+            "LiChao Tree. Convex Trick"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "DMOJ-apio10p1",
+        "nombre": "APIO '10 P1 - Commando",
+        "url": "https://dmoj.ca/problem/apio10p1",
+        "concurso": "",
+        "temas": [
+            "LiChao Tree. Convex Trick"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "OJ-CEOI17_building",
+        "nombre": "Building Bridges",
+        "url": "https://oj.uz/problem/view/CEOI17_building",
+        "concurso": "",
+        "temas": [
+            "LiChao Tree. Convex Trick"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CF-1083E",
+        "nombre": "The Fair Nut and Rectangles",
+        "url": "https://codeforces.com/contest/1083/problem/E",
+        "concurso": "",
+        "temas": [
+            "LiChao Tree. Convex Trick"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
+    },
+    {
+        "id": "CSES-1620",
+        "nombre": "Factory Machines",
+        "url": "https://cses.fi/problemset/task/1620",
+        "concurso": "",
+        "temas": [
+            "Binary Search"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": ""
+    },
+    {
+        "id": "CSES-2166",
+        "nombre": "Prefix Sum Queries",
+        "url": "https://cses.fi/problemset/task/2166",
+        "concurso": "",
+        "temas": [
+            "Segment Tree"
+        ],
+        "ruta_solucion": "",
+        "etiqueta": "Introductorio"
     }
 ]
